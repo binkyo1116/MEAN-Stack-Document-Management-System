@@ -1,0 +1,38 @@
+.editForm.md-padding(layout-align="center center")
+  div(layout-align="center center" layout layout-padding)
+
+    form.md-margin(method="post" enctype='multipart/data')
+      div(layout="row" layout-align="center center")
+        h3.md-margin.sign-up-header Your Profile Details
+      div(layout-gt-sm="column" flex)
+        md-input-container.md-block(flex)
+          md-icon(md-font-set="fa fa-user")
+          input(ng-model="loggedInUser.userName" type="text" placeholder="Username" ng-required="true")
+        div(layout-gt-sm="row" layout="column")
+          md-input-container.md-block(flex)
+            md-icon(md-font-set="fa fa-user")
+            input(ng-model="loggedInUser.name.firstName" type="text" placeholder="Firstname" ng-required="true")
+          md-input-container.md-block(flex)
+            md-icon(md-font-set="fa fa-user")
+            input(ng-model="loggedInUser.name.lastName" type="text" placeholder="Lastname" ng-required="true")
+        div(layout-gt-sm="row" layout="column")
+          md-input-container.md-block(flex)
+            md-icon(md-font-set="fa fa-envelope")
+            input(ng-model="loggedInUser.email" type="email" placeholder="Email" ng-required="true")
+          md-input-container.md-block(flex)
+            md-icon(md-font-set="fa briefcase")
+            md-select(placeholder="Select role" ng-model="loggedInUser.role" aria-label="role" flex)
+              md-option(ng-repeat="role in roles" ng-value="role.title") {{role.title}}
+        md-input-container.md-block(flex)
+          md-icon(md-font-set="fa fa-key")
+          input(ng-model="password" type="password" placeholder="Password" ng-required="true")
+
+        p {{status}}
+
+        div(layout="row" flex layout-align="center end")
+          md-button.md-raised.md-margin.button(ng-click="editProfile()")
+            md-icon(class="material-icons") update
+            | Update Profile
+          md-button.md-raised.md-accent(ui-sref="dashboard")
+            md-icon(class="material-icons") cancel
+            | Cancel
