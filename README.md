@@ -34,15 +34,10 @@ The application allows for the SuperAdmin to manage the entire process and assig
 Run `gulp test` on your terminal. Remember to  run test on the project root directory.
 
 ### Contributing
-1. Create an issue. First look through [the open issues](https://github.com/andela-rekemezie/Document-Management-System/issues).
+1. Create an issue.
 2. Clone the repository or fork it.
 3. Create your feature branch: `git checkout -b my-new-feature`
 5. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin your-new-feature`
 5. Submit a pull request.
 
-###  Links
-* Follow me on [twitter](https://twitter.com/EkemezieRowland).
-* [CLI version of Document manager with mongodb](https://github.com/andela-rekemezie/DMS-Mongoose).
-* [CLI version of Document manager with PostgreSQL](https://github.com/andela-rekemezie/DMS-Sequelize).
-* [Document-REST-API](https://github.com/andela-rekemezie/Document-Manager-REST-API)
